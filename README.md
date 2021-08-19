@@ -54,33 +54,38 @@ Add the following configuration options to the sopel configuration file (default
 
 ```
 [ctxreminders]
-
 # Location of the reminder file that is used as persistent storage
 # Convention is to use the configuration folder and call the file
 # "<basename>.contextualreminders.json"
 # Leave blank to use the bot home directory
-#persistence_dir =
+# persistence_dir =
 
 # Maximum and minimum durations on which to add context to the reminder,
 # expressed in seconds.
 #
-# E.g. to add context to anything over 30 days, the duration
-# should be 2592000 (86400 * 30)
+# E.g. to add context to anything over 10 days, the duration
+# should be 864000 (86400 * 10)
 #
 # Defaults are:
 #   context_capture_max_duration = inf
-#   context_capture_min_duration = 2592000
+#   context_capture_min_duration = 864000
 context_capture_max_duration = inf
-context_capture_min_duration = 2592000
+context_capture_min_duration = 864000
 
 # Number of lines of chat to capture as part of the context when a
 # reminder is set within the capture duration.
 context_capture_chat_lines = 20
 
-# URL to your privatebin instance additional context can be displayed
+# URL to your privatebin where additional context can be displayed
 # Not providing a privatebin_url will result in no additional context
-# being captured with reminders or pasted
-#privatebin_url =
+# being captured or displayed
+#pastebin_url =
+
+# Paste expiration timeframe in privatebin format
+# Full details https://github.com/PrivateBin/PrivateBin/blob/master/cfg/conf.sample.php#L117-L125
+# Default options are:
+#   5min, 10min, 1hour, 1day, 1week, 1month, 1year, never
+pastebin_expiration = 1year
 ```
 
 ## Migrate old reminders
