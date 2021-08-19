@@ -90,5 +90,6 @@ pastebin_expiration = 1year
 
 ## Migrate old reminders
 
-Old reminders will be automatically migrated from the reminder database on bot startup.
+Old reminders need to be migrated from the core reminder database from their db or csv formats into
+contextual reminders' JSON format.
 
