@@ -35,7 +35,16 @@ Assuming an already existing directory ```./sopel-config``` that contains the de
 pyenv install 3.7.10 && pyenv virtualenv 3.7.10 sopel-contextualreminders
 pyenv activate sopel-contextualreminders
 git clone git@github.com:davidpirogov/sopel-contextualreminders.git ./sopel-contextualreminders
-cd ./sopel-contextualreminders && pip install . && sopel-plugins enable sopel-contextualreminders
+cd ./sopel-contextualreminders && pip install .
+```
+
+If you have not set up sopel bot yet, set up and enable the plugin. **Note**: If you use the
+```--config-dir``` configuration option, you need to set the db_filename in the ```[core]```
+configuration section, e.g. ```db_filename = default.db```
+
+```
+sopel-config init --config-dir ./sopel-config
+sopel-plugins enable contextualreminders --config-dir ./sopel-config
 sopel --config-dir ./sopel-config
 ```
 
