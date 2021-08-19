@@ -18,7 +18,7 @@ from .types import ContextualReminder
 log = tools.get_logger('ctx_reminders')
 
 BOT_MEMORY_LOCK = threading.RLock()
-CHECK_UPCOMING_REMINDERS_WITH_CONTEXT_INTERVAL = 5  # 60 seconds
+CHECK_UPCOMING_REMINDERS_WITH_CONTEXT_INTERVAL = 60  # seconds
 CHECK_REMINDER_JOBS_INTERVAL = 2  # seconds
 MAX_MESSAGES_BOT_REPLY = 5
 
