@@ -5,3 +5,4 @@ pyroma
 mypy
 types-pytz
 sopel
+PrivateBinAPI
