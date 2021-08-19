@@ -5,10 +5,39 @@ An improved reminder module that adds context for long-dated reminders.
 ## Requirements
 
 Python version: ```>=3.7```
+Sopel version: ```>=7.1.0```
 
 ## Install
 
-Link the plugin directory ```sopel-contextualreminders``` into the Sopel modules directory.
+TODO: publish on pypi
+
+
+**Important: Disable** the bundled remind module by adding it to the core exclude section in the
+```default.cfg``` file:
+
+```
+[core]
+exclude =
+    remind
+```
+
+### Dev Setup
+
+Install the directory ```sopel-contextualreminders``` locally with pip and use the sopel-plugins
+command to activate it.
+
+While the minimum Python target version is 3.7, more recent versions are encouraged. Use of pyenv
+is also encouraged.
+
+Assuming an already existing directory ```./sopel-config``` that contains the default.cfg file
+
+```
+pyenv install 3.7.10 && pyenv virtualenv 3.7.10 sopel-contextualreminders
+pyenv activate sopel-contextualreminders
+git clone git@github.com:davidpirogov/sopel-contextualreminders.git ./sopel-contextualreminders
+cd ./sopel-contextualreminders && pip install . && sopel-plugins enable sopel-contextualreminders
+sopel --config-dir ./sopel-config
+```
 
 ## Configure
 
