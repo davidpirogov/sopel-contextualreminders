@@ -1,0 +1,7 @@
+pylint
+coverage
+pytest
+pyroma
+mypy
+types-pytz
+sopel
